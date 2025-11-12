@@ -89,6 +89,7 @@ bool Kinect2Pipe::openKinect2Device() {
         cerr << "unable to start kinect2 rgb stream" << endl;
         return false;
     }
+    dev->setLedStatus((LedSettings){0,0,100,100,0,0});
     while (this->started) {
         if (!listener.waitForNewFrame(frames, 2000)) {
             cerr << "timeout waiting for frame" << endl;
