@@ -101,7 +101,7 @@ bool Kinect2Pipe::openKinect2Device() {
     }
     this->writeBlankFrame();
     dev->stop();
-    dev->close();
+    // dev->close();
     return true;
 }
 
